@@ -32,24 +32,56 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  function addition(a, b) { // функция сложения, вернуть a + b
+  /**
+ * Сложение двух чисел
+ * @param {number} первое число для сложения.
+ * @param {number} второе число для сложения.
+ * @return {number} результат сложения.
+ */
+ function addition(a, b) { // функция сложения, вернуть a + b
     return a + b;
   }
   
+  /**
+ * Вычитание двух чисел
+ * @param {number} уменьшаемое.
+ * @param {number} вычитаемое.
+ * @return {number} разность.
+ */
   function subtraction(a, b) { // функция вычитания, вернуть a - b
     if (a < b) {
       return b - a;
-    } else return a - b;
+    } 
+    return a - b;
   }
 
+  /**
+ * Умножение двух чисел
+ * @param {number} первый множитель.
+ * @param {number} второй множитель.
+ * @return {number} произведение.
+ */
   function multiplication(a, b) { // функция умножения, вернуть a * b
     return a * b;
   }
 
+  /**
+ * деление двух чисел
+ * @param {number} делимое.
+ * @param {number} делитель.
+ * @return {number} частное.
+ */
   function division(a, b) { // функция деления, вернуть a / b
     return a / b;
   }
 
+  /**
+ * математические операции (+,-,*,/)
+ * @param {number} первое число для операции
+ * @param {number} второе число для операции
+ * @param {string} математическая операция 
+ * @return {number} результат операции
+ */
   function mathOperation(arg1, arg2, operation) {
     switch (operation) {
       case '+': return addition(arg1, arg2);
