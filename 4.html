@@ -46,7 +46,7 @@
 
   const filteredProducts = products.filter((item) => {
     if ('photos' in item) return item.photos.length > 0;
-  })
+  });
   
   console.log('Filtered:');
   filteredProducts.forEach((item) => {console.log(item)});
