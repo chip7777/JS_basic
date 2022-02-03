@@ -50,13 +50,13 @@
 <script>
   "use strict";
 
-  function PostES5(author, text){
+  function PostES5(author, text) {
     this.author = author;
     this.text = text;
     this.modified = new Date();
   } 
 
-  PostES5.prototype.edit = function(text){
+  PostES5.prototype.edit = function(text) {
     this.text = text;
     this.modified = new Date();
   }
@@ -68,13 +68,13 @@
 
 
 
-  class PostES6{
+  class PostES6 {
     constructor(author, text) {
       this.author = author;
       this.text = text;
       this.modified = new Date();  //
       }
-    edit(text){
+    edit(text) {
       this.text = text;
       this.modified = new Date();
     }
@@ -85,7 +85,7 @@
   //post2.edit('Biography of Margaret and her family');
   //console.log(post2);
 
-  function AttachedPostES5(author, text){
+  function AttachedPostES5(author, text) {
     PostES5.call(this, author, text);
     this.highlighted = false;
   }
@@ -93,7 +93,7 @@
   AttachedPostES5.prototype = Object.create(PostES5.prototype);
   AttachedPostES5.prototype.consructor = AttachedPostES5;
 
-  AttachedPostES5.prototype.makeTextHighlighted = function(){
+  AttachedPostES5.prototype.makeTextHighlighted = function() {
     this.highlighted = true;
     this.modified = new Date();
   }
@@ -105,11 +105,11 @@
   console.log(attachedPost1);
 
   class AttachedPostES6 extends PostES6 {
-    constructor(author, text){
+    constructor(author, text) {
       super(author, text);
       this.highlighted = false;
     }
-    makeTextHighlighted(){
+    makeTextHighlighted() {
       this.highlighted = true;
       this.modified = new Date();
     }
