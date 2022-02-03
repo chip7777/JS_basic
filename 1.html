@@ -25,27 +25,27 @@
     this.cost = cost;
   }
 
-  ProductES5.prototype.make25Discount = function (){
-  this.cost = this.cost - this.cost*25/100;
+  ProductES5.prototype.make25Discount = function () {
+  this.cost = this.cost - this.costи*25 / 100;
   }
 
-  const prod1 = new ProductES5('orange',55);
+  const prod1 = new ProductES5('orange', 55);
 
   console.log(`Name: ${prod1.name}, cost: ${prod1.cost}`);
   prod1.make25Discount();
   console.log(`Name: ${prod1.name}, cost: ${prod1.cost}`);
 
   class ProductES6 {
-    constructor(name,cost){
+    constructor(name, cost) {
       this.name = name;
       this.cost = cost;
     }
-    make25Discount(){
-      this.cost = this.cost - this.cost*25/100;
+    make25Discount() {
+      this.cost = this.cost - this.cost * 25 / 100;
     }
   }
 
-  const prod2 = new ProductES6('apple',100);
+  const prod2 = new ProductES6('apple', 100);
   
   console.log(`Name: ${prod2.name}, cost: ${prod2.cost}`);
   prod2.make25Discount();
