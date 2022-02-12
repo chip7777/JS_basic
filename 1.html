@@ -43,7 +43,7 @@
   1. Установите всем элементам с классом "productName" размер шрифта 24px.
    */
   
-  document.querySelectorAll('.productName').forEach(elem =>{
+  document.querySelectorAll('.productName').forEach(elem => {
     elem.style.fontSize = '24px';
   });
 
@@ -51,7 +51,7 @@
   2. Установите всем элементам с классом "product" внешний отступ справа 50px.
    */
   
-   document.querySelectorAll('.product').forEach(elem =>{
+   document.querySelectorAll('.product').forEach(elem => {
      elem.style.marginRight = '50px';
    });
 
@@ -61,10 +61,10 @@
    */
   
   document.addEventListener('click',event => {
-        if (event.target.tagName === 'BUTTON') {
-          event.target.textContent='Добавлено';
-          event.target.disabled = true;
-        }
+    if (event.target.tagName === 'BUTTON') {
+       event.target.textContent 'Добавлено';
+       event.target.disabled = true;
+     }
   });
 
   /*

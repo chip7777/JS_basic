@@ -65,9 +65,9 @@
   должно моментально отображаться в span. То есть при печати в input'е тег span
   также должен меняться.
   */
-
+  const spanel = document.querySelector('span');
   document.querySelector('#from').addEventListener('input', ev => {
-    document.querySelector('span').textContent = ev.target.value;
+    spanel.textContent = ev.target.value;
   });
 
   /*
@@ -76,11 +76,10 @@
   1) добавить два класса: animate__animated и animate__fadeInLeftBig
   2) поставить данному элементу стиль visibility в значение 'visible'.
    */
-
-  document.querySelector('.messageBtn').addEventListener('click', () => {
-    const tgt = document.querySelector('.message');
-    tgt.classList.add('animate__animated');
-    tgt.classList.add('animate__fadeInLeftBig');
+  
+   const tgt = document.querySelector('.message');
+  document.querySelector('.messageBtn').addEventListener('click', () => {  
+    tgt.classList.add('animate__animated' , 'animate__fadeInLeftBig');
     tgt.style.visibility = 'visible';
   });
 
