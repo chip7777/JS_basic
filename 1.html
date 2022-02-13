@@ -59,6 +59,19 @@
     X6: "Знаю, программирование это нелегко.",
     H99: "Однако, программирование, в итоге, принесет свои плоды.",
   };
+  const tabText = document.querySelector('.text');
+  const clear = function () {
+    document.querySelectorAll('.nav-link').forEach(el => 
+      el.classList.remove('active')
+    );
+  };
+
+  document.querySelector('.nav')
+    .addEventListener('click', tgt => {
+    clear();
+    tgt.target.classList.add('active');
+    tabText.textContent = panelText[tgt.target.parentElement.dataset.text];
+  });
 
 
   /*
@@ -67,7 +80,11 @@
   шрифт у текста, никакого резкого увеличения шрифта не должно быть при
   перетаскивании ползунка.
    */
-
+  
+   const fSize = document.querySelector('#inputDiv');
+   document.querySelector('input').addEventListener('input', event => {
+    fSize.style.fontSize = `${event.target.value}px`;
+  });
 
 </script>
 </body>

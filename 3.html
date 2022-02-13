@@ -24,8 +24,10 @@
    * @returns {number} - Набольшее число из набора цифр числа, переданного в
    * параметр "n"
    */
+  
   function descendingOrder(n) {
-
+    const mass = [...String(n)];
+    return mass.sort().reverse().join('');
   }
 
   console.log(descendingOrder(42145)); // 54421
